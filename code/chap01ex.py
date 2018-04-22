@@ -19,8 +19,11 @@ def main(script):
 
     script: string script name
     """
+    resp = nsfg.ReadFemResp()
+    # print(resp.head())
+    
+    print(resp.pregnum.value_counts().sort_index())
     print('%s: All tests passed.' % script)
-
 
 if __name__ == '__main__':
     main(*sys.argv)
